@@ -10,7 +10,9 @@ namespace TravelReview.Models
     {
         [Key]
         public int ID { get; set; }
+        [Display(Name ="Planet Name")]
         public string PlanetName { get; set; }
+        [Display(Name ="Planet Type")]
         public string PlanetType { get; set; }
 
         public virtual ICollection<Reviews> Reviews { get; set; }

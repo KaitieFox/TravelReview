@@ -11,9 +11,12 @@ namespace TravelReview.Models
     {
         [Key]
         public int ID { get; set; }
+        [Display(Name ="Review Summary"), MaxLength(50)]
         public string Title { get; set; }
+        [MaxLength(500)]
         public string Content { get; set; }
         public DateTime PublishDate { get; set; }
+        [Range(1,5)]
         public int Rating { get; set; }
 
         [ForeignKey("Category") Display(Name = "Planets")]
